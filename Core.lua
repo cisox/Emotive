@@ -287,7 +287,7 @@ function Emotive:ToggleEmotesList()
             Emotive.menu:SetPoint(Emotive.db.profile.menu.point, nil, Emotive.db.profile.menu.relativePoint, Emotive.db.profile.menu.x, Emotive.db.profile.menu.y)
         end
 
-        UIDropDownMenu_SetWidth(Emotive.menu, Emotive.db.profile.menu.width or 100)
+        UIDropDownMenu_SetWidth(Emotive.menu, 100)
         UIDropDownMenu_SetText(Emotive.menu, L["Emotive"])
         UIDropDownMenu_Initialize(Emotive.menu, MenuInitialize)
 
@@ -295,7 +295,6 @@ function Emotive:ToggleEmotesList()
         Emotive.menu:SetScript("OnDragStop", function(self)
             self:StopMovingOrSizing()
             Emotive.db.profile.menu.point, _, Emotive.db.profile.menu.relativePoint, Emotive.db.profile.menu.x, Emotive.db.profile.menu.y = self:GetPoint(1)
-            Emotive.db.profile.menu.width = self:GetWidth()
         end)
 
         Emotive.db.profile.menu.hide = false
