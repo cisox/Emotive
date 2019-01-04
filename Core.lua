@@ -63,6 +63,7 @@ function Emotive:OnInitialize()
                 tooltip:AddLine("|cffff8040" .. L["Left Click"] .. "|r " .. L["to toggle dropdown"])
                 tooltip:AddLine("|cffff8040" .. L["Right Click"] .. "|r " .. L["for options"])
                 tooltip:AddLine("|cffff8040" .. L["Shift + Left Click"] .. "|r " .. L["to toggle minimap"])
+                tooltip:AddLine("|cffff8040" .. L["Drag"] .. "|r " .. L["to move this button"])
                 tooltip:Show()
             end
         end,

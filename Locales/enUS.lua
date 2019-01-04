@@ -18,9 +18,11 @@ L["X Only"] = function(X) return X .. " Only" end
 L["Left Click"] = true
 L["Right Click"] = true
 L["Shift + Left Click"] = true
+L["Drag"] = true
 L["to toggle dropdown"] = true
 L["for options"] = true
 L["to toggle minimap"] = true
+L["to move this button"] = true
 
 local emotes = {
     { "agree", "You agree.", "You agree with <target>." },
