@@ -12,6 +12,7 @@
 ## X-Website: https://github.com/cisox/Emotive
 ## X-Feedback: https://github.com/cisox/Emotive/issues
 ## X-Curse-Project-ID: 310582
+## X-WoWI-ID: 24873
 
 embeds.xml
 Locales.xml
