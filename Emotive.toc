@@ -2,7 +2,7 @@
 ## Title: Emotive
 ## Notes: Simple interface for emotes.
 ## Author: Jedorak
-## Version: 0.0.2
+## Version: 0.0.3
 ## DefaultState: enabled
 ## SavedVariables: EmotiveDB
 ## OptionalDeps: Ace3
@@ -12,7 +12,6 @@
 ## X-Website: https://github.com/cisox/Emotive
 ## X-Feedback: https://github.com/cisox/Emotive/issues
 ## X-Curse-Project-ID: 310582
-## X-WoWI-ID: 9999
 
 embeds.xml
 Locales.xml
