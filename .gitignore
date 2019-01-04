@@ -1,0 +1,13 @@
+*.pub
+*.sublime-workspace
+.DS_Store
+.project
+emotive.iml
+make-dist.sh
+move.sh
+wow-api
+wow-ui-source
+images/Emotive.ai
+images/Emotive.png
+dist
+.idea

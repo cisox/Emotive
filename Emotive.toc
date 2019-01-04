@@ -1,0 +1,20 @@
+## Interface: 80100
+## Title: Emotive
+## Notes: Simple interface for emotes.
+## Author: Jedorak
+## Version: 0.1
+## DefaultState: enabled
+## SavedVariablesPerCharacter: EmotiveDB
+## OptionalDeps: Ace3
+## X-Embeds: Ace3
+## X-Category: Miscellaneous
+## X-License: All Rights Reserved: You are free to fork and modify on GitHub, please ask us about anything else.
+## X-Website: https://github.com/cisox/Emotive
+## X-Curse-Project-ID: 9999
+## X-WoWI-ID: 9999
+
+embeds.xml
+Locales.xml
+Init.lua
+Emotes.lua
+Core.lua

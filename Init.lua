@@ -1,0 +1,1 @@
+Emotive = LibStub("AceAddon-3.0"):NewAddon("Emotive", "AceConsole-3.0")
