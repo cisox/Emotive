@@ -47,9 +47,23 @@ function Emotive:OnInitialize()
         icon = "Interface\\AddOns\\" .. Emotive.name .. "\\images\\" .. Emotive.name,
         OnClick = function(self, button)
             if button == "RightButton" then
-                InterfaceOptionsFrame_OpenToCategory(Emotive.optionsFrame)
+                Emotive:Config()
             else
-                Emotive.ToggleEmotesList()
+                if IsShiftKeyDown() then
+                    Emotive:ToggleMinimap()
+                else
+                    Emotive.ToggleEmotesList()
+                end
+
+            end
+        end,
+        OnTooltipShow = function(tooltip)
+            if tooltip and tooltip.AddLine then
+                tooltip:SetText(Emotive.name)
+                tooltip:AddLine("|cffff8040" .. L["Left Click"] .. "|r " .. L["to toggle dropdown"])
+                tooltip:AddLine("|cffff8040" .. L["Right Click"] .. "|r " .. L["for options"])
+                tooltip:AddLine("|cffff8040" .. L["Shift + Left Click"] .. "|r " .. L["to toggle minimap"])
+                tooltip:Show()
             end
         end,
     })
@@ -62,9 +76,20 @@ function Emotive:OnInitialize()
     end
 end
 
+function Emotive:Config()
+    if Emotive.optionsFrame then
+        if (InterfaceOptionsFrame:IsShown()) then
+            InterfaceOptionsFrame:Hide()
+        else
+            InterfaceOptionsFrame_OpenToCategory(Emotive.optionsFrame)
+            InterfaceOptionsFrame_OpenToCategory(Emotive.optionsFrame)
+        end
+    end
+end
+
 function Emotive:ChatCommand(input)
     if not input or input:trim() == "" then
-        InterfaceOptionsFrame_OpenToCategory(Emotive.optionsFrame)
+        Emotive:Config()
     else
         LibStub("AceConfigCmd-3.0"):HandleCommand("emotive", "Emotive", input)
     end
