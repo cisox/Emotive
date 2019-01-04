@@ -2,7 +2,7 @@
 ## Title: Emotive
 ## Notes: Simple interface for emotes.
 ## Author: Jedorak
-## Version: 0.0.1
+## Version: 0.0.2
 ## DefaultState: enabled
 ## SavedVariables: EmotiveDB
 ## OptionalDeps: Ace3
