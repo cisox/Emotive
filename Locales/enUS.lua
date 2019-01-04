@@ -15,6 +15,12 @@ L["Toggles the display of the Emotive dropdown menu."] = true
 L["Toggles the display of the Emotive minimap icon."] = true
 L["Alphabet"] = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 L["X Only"] = function(X) return X .. " Only" end
+L["Left Click"] = true
+L["Right Click"] = true
+L["Shift + Left Click"] = true
+L["to toggle dropdown"] = true
+L["for options"] = true
+L["to toggle minimap"] = true
 
 local emotes = {
     { "agree", "You agree.", "You agree with <target>." },
