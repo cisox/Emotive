@@ -2,15 +2,16 @@
 ## Title: Emotive
 ## Notes: Simple interface for emotes.
 ## Author: Jedorak
-## Version: 0.1
+## Version: 0.0.1
 ## DefaultState: enabled
-## SavedVariablesPerCharacter: EmotiveDB
+## SavedVariables: EmotiveDB
 ## OptionalDeps: Ace3
 ## X-Embeds: Ace3
-## X-Category: Miscellaneous
+## X-Category: Chat & Communication
 ## X-License: All Rights Reserved: You are free to fork and modify on GitHub, please ask us about anything else.
 ## X-Website: https://github.com/cisox/Emotive
-## X-Curse-Project-ID: 9999
+## X-Feedback: https://github.com/cisox/Emotive/issues
+## X-Curse-Project-ID: 310582
 ## X-WoWI-ID: 9999
 
 embeds.xml
