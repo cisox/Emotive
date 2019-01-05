@@ -179,6 +179,7 @@ function Emotive:ToggleEmotesList()
 
         function AddEmote(emote, level)
             local _, raceEn = UnitRace("player")
+            local faction = UnitFactionGroup("player", true);
             local targetName, _ = UnitName("target")
             local info = UIDropDownMenu_CreateInfo()
             local descriptor = "Text"
@@ -216,9 +217,24 @@ function Emotive:ToggleEmotesList()
             info.text, info.func, info.notCheckable, info.arg1, info.tooltipOnButton, info.tooltipWhileDisabled = emote, Emotive.SendEmote, 1, emote, 1, 1
 
             --- Disable clicking if player doesn't meet restrictions
-            if definition["Restrictions"] ~= nil and definition["Restrictions"]["race"] ~= nil and definition["Restrictions"]["race"] ~= raceEn then
-                info.tooltipTitle = info.tooltipTitle .. " [" .. L["X Only"](definition["Restrictions"]["race"]) .. "]"
-                info.notClickable = 1
+            if definition["Restrictions"] ~= nil then
+                if definition["Restrictions"]["race"] ~= nil and definition["Restrictions"]["race"] ~= raceEn then
+                    info.tooltipTitle = info.tooltipTitle .. " [" .. L["X Only"](definition["Restrictions"]["race"]) .. "]"
+                    info.notClickable = 1
+                elseif definition["Restrictions"]["faction"] ~= nil and definition["Restrictions"]["faction"] ~= faction then
+                    info.tooltipTitle = info.tooltipTitle .. " [" .. L["X Only"](definition["Restrictions"]["faction"]) .. "]"
+                    info.notClickable = 1
+                elseif definition["Restrictions"]["target"] ~= nil then
+                    if definition["Restrictions"]["target"] and targetName == nil then
+                        info.tooltipTitle = info.tooltipTitle .. " [" .. L["X Only"]("Target") .. "]"
+                        info.notClickable = 1
+                    end
+
+                    if not definition["Restrictions"]["target"] and targetName ~= nil then
+                        info.tooltipTitle = info.tooltipTitle .. " [" .. L["X Only"]("Self") .. "]"
+                        info.notClickable = 1
+                    end
+                end
             end
 
             UIDropDownMenu_AddButton(info, level)
