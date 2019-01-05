@@ -1,4 +1,4 @@
-# Emotive WoW Add-On
+# Emotive WoW AddOn
 
 Emotive adds a simple dropdown menu for Emotes.
 
