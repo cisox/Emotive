@@ -13,3 +13,4 @@ images/Emotive-Logo.png
 screenshots
 dist
 .idea
+*.php
