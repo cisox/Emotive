@@ -298,6 +298,7 @@ function Emotive:ToggleEmotesList()
         Emotive.menu:EnableMouse(true)
         Emotive.menu:SetClampedToScreen(true)
         Emotive.menu:RegisterForDrag("LeftButton")
+        Emotive.menu:SetFrameStrata("LOW")
 
         if (Emotive.db.profile.menu.point and Emotive.db.profile.menu.relativePoint and Emotive.db.profile.menu.x and Emotive.db.profile.menu.y) then
             Emotive.menu:ClearAllPoints()
